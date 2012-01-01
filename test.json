@@ -1,0 +1,34 @@
+config:
+  name: jam
+  language: javascript
+  brief: hooray!
+
+data:
+  classes:
+    Array:
+      overview: Provides a feature-full array ADT, interchangable with Javascript's inbuilt array object
+      methods:
+        each:
+          aliases: ["for-each", "every"]
+          synopsis: applies a function across each element
+          syntax: hooray!
+          parameters:
+            options: An optional structure
+            fn: A function taking a single argument 'function(x)'. Applied to each element
+          remarks: |
+            This function runs in O(n) time,
+            applying //fn// to each element linearly.
+            {{{js:
+            O Hai!
+            }}}
+        
+        filter:
+          synopsis: mutates array, removing elements that fail the predicate,
+          parameters:
+            options: An optional structure,
+            predicate: The predicate to use. A function with the signature 'function(x)'
+          remarks: This function runs in O(n) time, traversing the elements only once.
+    Set:
+      methods:
+        filter:
+          synopsis: returns a copy of the set with elements failing supplied predicate removed
